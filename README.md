@@ -31,12 +31,6 @@ Git reset / Git clean: voltando as coisas
 
 Git stash / Git pop: salvando seu trabalho
 
-Git cherry-pick: selecionando commits
-
-Git reset / Git clean: voltando as coisas
-
-Git stash / Git pop: salvando seu trabalho
-
 Github: analisando branch e commit
 
 Como criar um Pull Request
