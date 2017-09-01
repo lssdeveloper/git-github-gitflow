@@ -1,0 +1,138 @@
+Passo a Passo para upar um projeto via terminal para o github
+
+1º Passo - Criar o projeto no github com o mesmo nome da past do repositório
+2º Passo - zipar o projeto no repositório local e apagar a pasta, foi será feito o clone do projeto no github
+3º Passo - Abrir o terminal de dentro da pasta do repositório e listar suas pastas ~/AndroidStudioProjects/Udemy $ ls
+4º Passo - clonar o porjeto ~/AndroidStudioProjects/Udemy $ git clone https://github.com/lssdeveloper/GasolinaouAlcool.git
+5º Passo - ~/AndroidStudioProjects/Udemy $ cd GasolinaouAlcool
+6º Passo - ~/AndroidStudioProjects/Udemy/GasolinaouAlcool $ git status
+7º Passo - adiciona copiando a pasta com src bin e outros todas as pastas e arquivos listados no status
+
+No ramo master
+Your branch is up-to-date with 'origin/master'.
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+
+	app/
+	build.gradle
+	gradle.properties
+	gradle/
+	gradlew
+	gradlew.bat
+	settings.gradle
+
+
+leandro@leandro-S500CA ~/AndroidStudioProjects/Udemy/GasolinaouAlcool $ git add app/
+leandro@leandro-S500CA ~/AndroidStudioProjects/Udemy/GasolinaouAlcool $ git add build.gradle
+leandro@leandro-S500CA ~/AndroidStudioProjects/Udemy/GasolinaouAlcool $ git add gradle.properties
+leandro@leandro-S500CA ~/AndroidStudioProjects/Udemy/GasolinaouAlcool $ git add gradle/
+leandro@leandro-S500CA ~/AndroidStudioProjects/Udemy/GasolinaouAlcool $ git add gradlew
+leandro@leandro-S500CA ~/AndroidStudioProjects/Udemy/GasolinaouAlcool $ git add gradlew.bat
+leandro@leandro-S500CA ~/AndroidStudioProjects/Udemy/GasolinaouAlcool $ git add settings.gradle
+leandro@leandro-S500CA ~/AndroidStudioProjects/Udemy/GasolinaouAlcool $ git status
+
+8º Passo - Novamente git status para verificar que novos arquivos serão upados
+leandro@leandro-S500CA ~/AndroidStudioProjects/Udemy/GasolinaouAlcool $ git status
+
+
+9º Passo - git commit -m "Primeiro commit do projeto de estudo.É um projeto inicial de aprendizado."
+    9.1 git commit -m "Segundo Commit-Semena 2 do curso de TDD, tarefa a ser avaliada. Refatoração do código registraUsuario(String nome) - cheirando mau. "
+
+10ºPasso - Novamente git status
+11ºPasso - git push
+
+Username for 'https://github.com': lssdeveloper
+Password for 'https://lssdeveloper@github.com': a mesma de sempre
+
+e Finish
+
+
+
+
+INCLUINDO UAM PASTA NUM PROJETO EXISTENTE
+
+1º Faz-se o clone do projeto
+2º Na pasta do Git onde foi baixado o projeto insira a pasta que queira subir pa o Github
+3º $ ~/git/Curso ITA/TDD/Semana 2/CURSO_ITA_TDD $ git status
+4º $ ~/git/Curso ITA/TDD/Semana 2/CURSO_ITA_TDD $ git add Semana2_RefatorarSAB/
+5º $ ~/git/Curso ITA/TDD/Semana 2/CURSO_ITA_TDD $ git status
+No ramo master
+Your branch is up-to-date with 'origin/master'.
+Mudanças a serem submetidas:
+  (use "git reset HEAD <file>..." to unstage)
+.
+.
+.
+.
+.
+.
+6º $ ~/git/Curso ITA/TDD/Semana 2/CURSO_ITA_TDD $ git commit -m "Segundo Commit-Semena 2 do curso de TDD, tarefa a ser avaliada. Refatoração do código registraUsuario(String nome) - cheirando mau. "
+
+[master 1232f53] Segundo Commit-Semena 2 do curso de TDD, tarefa a ser avaliada. Refatoração do código registraUsuario(String nome) - cheirando mau.
+ 44 files changed, 1012 insertions(+)
+ create mode 100644 Semana2_RefatorarSAB/.classpath
+ create mode 100644 Semana2_RefatorarSAB/.project
+ create mode 100644 Semana2_RefatorarSAB/Tarefa Realizada - Enviada/SAB-tarefaRealizada-Leandro Serra.zip
+ create mode 100644 Semana2_RefatorarSAB/Tarefa Realizada - Enviada/documento- refatoracao-do-sab.pdf.zip
+ create mode 100644 Semana2_RefatorarSAB/bin/pSABbyCRC_UnitTestingSuite/AdicionarLivroInexistenteException.class
+.git
+.
+.
+.
+.
+7º $ ~/git/Curso ITA/TDD/Semana 2/CURSO_ITA_TDD $ git push
+Username for 'https://github.com': lssdeveloper
+Password for 'https://lssdeveloper@github.com': 
+Counting objects: 54, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (54/54), done.
+Writing objects: 100% (54/54), 676.48 KiB | 0 bytes/s, done.
+Total 54 (delta 22), reused 0 (delta 0)
+remote: Resolving deltas: 100% (22/22), done.
+To https://github.com/lssdeveloper/CURSO_ITA_TDD.git
+   f0bf7e9..1232f53  master -> master
+
+e FIM
+
+
+git 
+
+
+-----------------------------------------------------------------------------------------------------
+
+Dicas úteis
+*****************************************************************************
+ADICIONANDO TODOS ARQUIVOS NUM SÓ COMANDO add .
+*****************************************************************************
+adiciono todos os arquivos que estão sendo monitorados
+$ git add .
+
+se eu quiser voltar este comando
+volta todos os arquivos para o stage anterior (unstage)
+$ git reset HEAD .
+ou volta apenas um arquivo
+$ git reset HEAD <file>
+
+
+*****************************************************************************
+REMOVENDO UM ARQUIVO DO DIRETÓRIO
+*****************************************************************************
+força a remoção do diretório
+git rm -f <file>
+remove somente do track ou rastreio 
+git rm <file>
+
+*****************************************************************************
+RESTAURANDO UM ARQUIVO QUE AINDA NÃO FOI ADICIONADO NO REPOSITÓRIO GIT
+*****************************************************************************
+Ex: alterei um arquivo que estou trabalhando na IDE este arquivo evidente está no repositório GIT e quero retornar a versão anterior:
+
+ ao dar o comando git status o memso me informará que existe uma modificação neste arquivo, se não dei o comando add posso retornar esta versão com o comando:
+$ git checkout -- <file>
+
+O arquivo foi moficado mas ainda não foi feito o add é possível restaurar com o comando checkout:
+
+ex: index.html foi adicionado e fiz uma alteração no mesmo agora se der um git status ele informará que foi feita uma modificação
+se quiser voltar para a versão anterios basta dar o comando git checkout -- index.html e a versão inicial ou anterior será revertida na IDE.
+
+Obs: isto só é possível se tiver feito a modificação e não executado o comando add.
