@@ -1,0 +1,49 @@
+/* BASE */
+body {
+    margin: 0;
+    font-size: 13px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;    
+    background-color: #d3d7cf;	
+}
+.div-fundo {
+	background-color: #d3d7cf;
+	margin: 0 auto;	
+}
+/* TABVIEW */
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+    color: #555;
+}
+
+@media (max-width: 640px) {
+    .ui-tabs.ui-tabs-top > .ui-tabs-nav li {
+        width: 100%;
+    }
+}
+
+/* PANELGRID */
+.ui-panelgrid.panelgrid-noborder .ui-grid-responsive {
+    border: none;
+}
+
+@media (max-width: 640px) {
+    .ui-panelgrid.panelgrid-noborder .ui-grid-responsive .ui-grid-row {
+        border: none;
+    }
+}
+
+.backgoud-login {
+    background-color: #264935;
+}
+
+.ajuste-login {
+	height: 100px;
+	width: 420px !important;
+	margin: auto;
+	margin-top: 150px;
+}
+
+
+.permissao-negada {
+    text-align: center !important;
+    margin-top: 279px !important;
+}
