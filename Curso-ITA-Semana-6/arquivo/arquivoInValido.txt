@@ -1,3 +1,0 @@
-nome->->Eduardo
-sobrenome->Guerra->Professor
-idade 35
